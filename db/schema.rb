@@ -14,7 +14,8 @@ ActiveRecord::Schema.define(version: 2020_03_21_093558) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.string "color"
+    t.string "color_name"
+    t.string "color_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
