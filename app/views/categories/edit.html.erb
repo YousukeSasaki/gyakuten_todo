@@ -1,0 +1,23 @@
+<div class="container">
+<h5 class="my-5 ml-5">カテゴリー編集</h5>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <% if @category.errors.any? %>
+        <ul class="alert alert-danger mb-5" role="alert">
+          <% @category.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+      <%= form_with model: @category, url: category_path, local: true do |f| %>
+        <div class="form-row">
+          <p class="col-2 mb-0 text-center circle" style="color: <%= @category.color_code %>">●</p>
+          <div class="col-10 form-group">
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+        </div>
+        <%= f.submit "登録", class: "btn btn-primary col mt-3" %>
+      <% end %>
+    </div>
+  </div>
+</div>
