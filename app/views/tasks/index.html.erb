@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="wrapper mx-5">
+    <h5 class="my-5">タスク一覧</h5>
+    <h6>未完了</h6>
+    <div class="row justify-content-center mb-4">
+      <% @not_yet_tasks.each do |task| %>
+        <div class="col-12">
+          <div class="row card task-card">
+            <p class="col-1 mb-0 circle" style="color: <%= task.category.color_code %>">●</p>
+            <% if task.done %>
+              <p class="col-5 card-title done">
+            <% else %>
+              <p class="col-5 card-title">
+            <% end %>
+              <%= task.title %>
+            </p>
+            <p class="col-3 card-subtitle text-muted">
+              <%= task.deadline.strftime("%Y-%m-%d %H:%M") %>
+            </p>
+            <% if task.done %>
+              <%= link_to(done_task_path(task.id), method: :patch, class: "col-1 btn") do %>
+                <i class="material-icons">redo</i>
+              <% end %>
+            <% else %>
+              <%= link_to(done_task_path(task.id), method: :patch, class: "col-1 btn") do %>
+                <i class="material-icons">check_circle</i>
+              <% end %>
+            <% end %>
+            <%= link_to(edit_task_path(task.id), class: "col-1 btn") do %>
+              <i class="material-icons">edit</i>
+            <% end %>
+            <%= link_to(task_path(task.id), method: :delete, class: "col-1 btn") do %>
+              <i class="material-icons">delete</i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <h6>完了済</h6>
+    <div class="row justify-content-center mb-4">
+      <% @done_tasks.each do |task| %>
+        <div class="col-12">
+          <div class="row card task-card">
+            <p class="col-1 mb-0 circle" style="color: <%= task.category.color_code %>">●</p>
+            <% if task.done %>
+              <p class="col-5 card-title done">
+            <% else %>
+              <p class="col-5 card-title">
+            <% end %>
+              <%= task.title %>
+            </p>
+            <p class="col-3 card-subtitle text-muted">
+              <%= task.deadline.strftime("%Y-%m-%d %H:%M") %>
+            </p>
+            <% if task.done %>
+              <%= link_to(done_task_path(task.id), method: :patch, class: "col-1 btn") do %>
+                <i class="material-icons">redo</i>
+              <% end %>
+            <% else %>
+              <%= link_to(done_task_path(task.id), method: :patch, class: "col-1 btn") do %>
+                <i class="material-icons">check_circle</i>
+              <% end %>
+            <% end %>
+            <%= link_to(edit_task_path(task.id), class: "col-1 btn") do %>
+              <i class="material-icons">edit</i>
+            <% end %>
+            <%= link_to(task_path(task.id), method: :delete, class: "col-1 btn") do %>
+              <i class="material-icons">delete</i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
