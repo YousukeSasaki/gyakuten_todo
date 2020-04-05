@@ -1,3 +1,51 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  
+}
+
+.alert li {
+  margin-left: 20px;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: inherit;
+  padding: 1rem;
+}
+
+.card-title {
+  margin-bottom: 0;
+  line-height: 30px;
+}
+
+.card-subtitle {
+  margin-top: 0;
+  line-height: 30px;
+}
+
+.material-icons {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.task-card .btn {
+  padding: 0;
+}
+
+.circle {
+  font-size: 20px;
+}
+
+.done {
+  color: #888888;
+  text-decoration: line-through;
+}

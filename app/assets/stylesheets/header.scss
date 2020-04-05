@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  width: 100%;
+  // margin: 0 auto;
+  padding: 10px 30px;
+  background-color:  #007bff;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  & h4 {
+    display: inline;
+    line-height: 38px;
+    vertical-align: middle;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.header-icon {
+  color: #ffffff;
+  &:hover {
+    color: #d8d8d8;
+  }
+}

@@ -1,0 +1,10 @@
+<header>
+  <%= link_to root_path, class: "col-4 col-lg-6 title" do %>
+    <h4>GYAKUTEN TODO</h4>
+  <% end %>
+  <div class="col-8 col-lg-6 text-right">
+    <%= link_to "タスク一覧", root_path, class: "btn header-icon" %>
+    <%= link_to "タスク新規登録", new_task_path, class: "btn header-icon" %>
+    <%= link_to "カテゴリー設定", categories_path, class: "btn header-icon" %>
+  </div>
+</header>

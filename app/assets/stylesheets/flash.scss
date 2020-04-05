@@ -1,0 +1,13 @@
+.notifications {
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  
+  .notice {
+    background: #0099e8;
+    padding: .75rem 1.25rem;
+  }
+  .alert {
+    background: #ea352d;
+  }
+}
